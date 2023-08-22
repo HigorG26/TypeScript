@@ -1,9 +1,8 @@
 //Numeros - Numbers
-let x: number = 10;
-console.log("X = ", x)
+let cxx: number = 10
+console.log("X = ", cxx)
 
-x = 15
-console.log(typeof x)
+console.log(typeof cxx)
 
 const y:number=14.52537
 
@@ -31,3 +30,10 @@ console.log(typeof a)
 a = true
 
 console.log("2º: ",a)
+
+//---------------------------------
+//INTERFERANCE E ANNOTATION
+
+const ann: string = "Teste Annotation"
+
+let inf = "Teste inferance"
