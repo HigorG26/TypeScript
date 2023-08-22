@@ -1,5 +1,5 @@
-var n1 = 2;
-var n2 = 3;
+var n1 = 5;
+var n2 = 13;
 function greeting(n1, n2) {
     console.log("Resultado: ", n1 + n2);
 }
