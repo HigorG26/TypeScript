@@ -1,2 +1,2 @@
 # TypeScript
-Personal typescript project
+Personal typescript project, here I upload every task using TS, JS and more things like this...
