@@ -93,11 +93,11 @@ showBalance("Um milhão");
 //============================================================================
 
 type ID = string | number // <----- TYPE ALIAS
-function showId(id: ID){
-    if (typeof id == "number"){
-        return console.log(`ID: ${id} (Number)`)
-    }
-    return console.log(`ID: ${id} (String)`)
+function showId(id: ID) {
+  if (typeof id == "number") {
+    return console.log(`ID: ${id} (Number)`)
+  }
+  return console.log(`ID: ${id} (String)`)
 }
 
 showId(2)
@@ -107,40 +107,58 @@ showId("2")
 // 13 - INTERFACES
 //============================================================================
 
-interface Point{
-    x: number
-    y: number
-    z: number
-    local: string
+interface Point {
+  x: number
+  y: number
+  z: number
+  local: string
 }
 
-function showCoord(obj: Point){
-    console.log(`X: ${obj.x}\nY: ${obj.y}\nZ: ${obj.z}\nLocal: ${obj.local}`)
+function showCoord(obj: Point) {
+  console.log(`X: ${obj.x}\nY: ${obj.y}\nZ: ${obj.z}\nLocal: ${obj.local}`)
 }
 
 const coordObj: Point = {
-    x: -14545,
-    y: 516552,
-    z: -558456,
-    local: "Rua Nolina"
+  x: -14545,
+  y: 516552,
+  z: -558456,
+  local: "Rua Nolina"
 }
 
 showCoord(coordObj)
 
 //============================================================================
-// 13 - INTERFACES x TYPE ALIAS
+// 14 - INTERFACES x TYPE ALIAS
 //============================================================================
-interface Person{
-    name: string
+interface Person {
+  name: string
 }
 
 interface Person {
-    age: number
+  age: number
 }
 
-const somePerson: Person = {name: "Higor", age: 20}
+const somePerson: Person = { name: "Higor", age: 20 }
 console.log(somePerson)
 
 type personType = {
-    name: string
+  name: string
 }
+
+//============================================================================
+// 15 - LITERAL TYPES
+//============================================================================
+
+let test = "testando"
+
+test = "testado"
+
+console.log(test)
+
+function showDirection(direction: "left"|"right"|"center"){
+  console.log(`Direção escolhida: ${direction}`)
+}
+
+showDirection("left")
+showDirection("right")
+showDirection("center")

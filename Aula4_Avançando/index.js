@@ -102,3 +102,15 @@ const coordObj = {
 showCoord(coordObj);
 const somePerson = { name: "Higor", age: 20 };
 console.log(somePerson);
+//============================================================================
+// 15 - LITERAL TYPES
+//============================================================================
+let test = "testando";
+test = "testado";
+console.log(test);
+function showDirection(direction) {
+    console.log(`Direção escolhida: ${direction}`);
+}
+showDirection("left");
+showDirection("right");
+showDirection("center");
