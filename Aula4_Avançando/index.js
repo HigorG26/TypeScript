@@ -114,3 +114,20 @@ function showDirection(direction) {
 showDirection("left");
 showDirection("right");
 showDirection("center");
+//============================================================================
+// 16 - NON NULL ASSERTION OPERATORS
+//============================================================================
+const p = document.getElementById("p");
+console.log(p?.innerText); //O OPERADOR ! == TEXTO_DO_HTML | NULL
+//============================================================================
+// 17 - BIGINT
+//============================================================================
+let N;
+N = 1000n;
+console.log(typeof N, "\n", N);
+//============================================================================
+// 18 - SYMBOL 
+//============================================================================
+let symbolA = Symbol("a"); // ANNOTATION
+let symbolB = Symbol("b"); //INFERÊNCIA
+console.log(symbolA, "\n", symbolB);
