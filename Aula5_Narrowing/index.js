@@ -6,7 +6,7 @@ function sum(a, b) {
     if (typeof a === "string" && typeof b === "string") {
         console.log("Resultado:", parseFloat(a) + parseFloat(b));
     }
-    else if (typeof (a) === "number" && typeof (b) === "number") {
+    else if (typeof a === "number" && typeof b === "number") {
         let result = a + b;
         console.log("Resultado:", result);
     }
@@ -75,7 +75,7 @@ class Dog {
 const higao = new Dog("Higão");
 const higuinho = new Dog("Higuinho", "Higueras");
 function showDogDetail(dog) {
-    if ('bread' in dog) {
+    if ("bread" in dog) {
         console.log(`O cachorro ${dog.name} é da raça: ${dog.bread}`);
     }
     else {

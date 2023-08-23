@@ -13,9 +13,9 @@ function recebeDados(review: boolean, notas?: number) {
     } else {
       console.log("Inválido");
     }
-  }else if (review == false){
-    console.log("O usuário não retornou review.")
+  } else if (review == false) {
+    console.log("O usuário não retornou review.");
   }
 }
-recebeDados(true, 5)
-recebeDados(false)
+recebeDados(true, 5);
+recebeDados(false);
