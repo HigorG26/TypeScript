@@ -114,3 +114,14 @@ function sumAll(...n: number[]) {
   return n.reduce ((number, sum) => sum+number)
 }
 console.log("Soma:",sumAll(1,2,3,4,5,6,7,8,9,10))
+console.log(sumAll(56, 89, 565, 1, 1, 2, 1,5))
+
+//============================================================================
+// 11 - DESTRUCTUTING EM PARÂMETROS
+// 🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽
+
+function showProductDetails({name, price}: {name:string, price: number}): string {
+  return `O nome do é ${name} e ele custa R$${price}`
+}
+const shirt = {name: 'Camisa', price: 189.90}
+console.log(showProductDetails(shirt))
