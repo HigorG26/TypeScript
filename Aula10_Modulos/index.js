@@ -10,3 +10,16 @@ const greet_1 = __importDefault(require("./greet"));
 //importando variavel
 const variable_1 = require("./variable");
 console.log(variable_1.x);
+// multiplos imports
+const multiple_1 = require("./multiple");
+console.log(multiple_1.a);
+console.log(multiple_1.b);
+multiple_1.c;
+class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+const higorr = new User('Higor', 20);
+console.log(higorr.name, '\n' + higorr.age);
