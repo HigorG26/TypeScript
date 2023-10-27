@@ -188,6 +188,14 @@ function checkUsersPost() {
   ) {
     const childFunc = descriptor.value;
     console.log(childFunc);
+    descriptor.value = function (...args: any[]) {
+      if (args[1] == true) {
+        console.log("User já postou");
+        return null;
+      } else {
+        return childFunc.apply(this, args);
+      }
+    };
   };
 }
 
@@ -204,3 +212,48 @@ class Post {
 const newPost = new Post();
 
 newPost.post("My first post here.", newPost.alreadyPosted);
+newPost.post("My first post here.", newPost.alreadyPosted);
+
+// exemplo real property decorator
+
+function Max (limit: number) {
+  return function(
+    target: Object,
+    propertyKey: string
+    ) {
+      let value: string;
+
+
+      const getter = function() {
+        return value
+      }
+      const setter = function(newVal: string) {
+        if (newVal.length > limit) {
+          console.log(`O nome deve conter no máximo ${limit} caracteres!`)
+          return null
+        } else {
+          value = newVal
+          console.log(`Admin: ${value}`)
+        }
+      }
+
+      Object.defineProperty(target, propertyKey, {
+        get: getter,
+        set : setter
+      })
+
+    }
+
+}
+
+class Admin {
+  @Max(5)
+  username;
+
+  constructor(username: string) {
+    this.username = username
+  }
+}
+
+let admin = new Admin('higor')
+let admin1 = new Admin('heloisa')
