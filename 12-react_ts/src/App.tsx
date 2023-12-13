@@ -1,4 +1,5 @@
 import { useState} from 'react';
+import State from './components/State';
 import FisrtComponent from './components/fisrtComponent';
 
 function App() {
@@ -11,6 +12,8 @@ function App() {
     return `Olá, ${name}`
   }
 
+  //state
+
 
 
   return (
@@ -19,6 +22,8 @@ function App() {
       <h2>Nome: {name}</h2>
       <h2>{userGreeting(name)}</h2>
       <FisrtComponent/>
+
+      <State/>
     </div>
   );
 }
