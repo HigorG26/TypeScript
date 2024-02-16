@@ -22,3 +22,19 @@
     align-items: center;
     justify-content: center;
 }
+
+.actions i {
+    margin-bottom: .5em;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #282c34;
+    color: #fff;
+    padding: .4em;
+    transition: .2s;
+    border-radius: 6px;
+}
+
+.actions i:hover {
+    background-color: #fff;
+    color: #282c34;
+}
