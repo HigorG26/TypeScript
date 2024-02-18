@@ -54,10 +54,10 @@ function App() {
   return (
     <div>
       <Modal children={
-        <TaksForm 
+        <TaksForm
           btnText='Editar'
           taskList={taskList}
-          task={taskToUpdate} 
+          task={taskToUpdate}
           handleUpdate={updateTask}
         />}
       />
