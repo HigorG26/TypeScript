@@ -1,5 +1,5 @@
 import { Router, Request, Response } from "express";
-import { createMovie } from "./controllers/movieControllers";
+import { createMovie, findAllMovies, findMovieById, removeMovie, updateMovie } from "./controllers/movieControllers";
 
 //Validations
 import { validate } from "./middleware/handleValidator";
@@ -14,4 +14,9 @@ export default router.get("/test", (req: Request, res: Response) => {
     }else {
         res.send("API Offline")
     }
-}).post("/movie", movieCreateValidation(), validate, createMovie)
+})
+    .post("/movie", movieCreateValidation(), validate, createMovie)
+    .get("/movie/:id", findMovieById)
+    .get("/movie/", findAllMovies)
+    .delete("/movie/delete/:id", removeMovie)
+    .patch("/movie/:id", movieCreateValidation(), validate, updateMovie)
