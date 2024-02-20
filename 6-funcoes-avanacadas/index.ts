@@ -8,7 +8,7 @@ function semRetorno(): void {
 //============================================================================
 // 2 - CALLBACK COMO ARGUMENTO
 // 🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽
-function greeting(name: string) {
+function greetingg(name: string) {
   return `Olá ${name}`;
 }
 function preGreeting(f: (name: string) => string, userName: string) {
@@ -17,7 +17,7 @@ function preGreeting(f: (name: string) => string, userName: string) {
   const greet = f(userName);
   console.log(greet);
 }
-preGreeting(greeting, "Higor");
+preGreeting(greetingg, "Higor");
 
 //============================================================================
 // 3 - GENERIC FUNCTION
@@ -120,8 +120,8 @@ console.log(sumAll(56, 89, 565, 1, 1, 2, 1,5))
 // 11 - DESTRUCTUTING EM PARÂMETROS
 // 🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽🔽
 
-function showProductDetails({name, price}: {name:string, price: number}): string {
+function showProductDetailss({name, price}: {name:string, price: number}): string {
   return `O nome do é ${name} e ele custa R$${price}`
 }
 const shirt = {name: 'Camisa', price: 189.90}
-console.log(showProductDetails(shirt))
+console.log(showProductDetailss(shirt))

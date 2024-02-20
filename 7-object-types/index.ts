@@ -41,10 +41,10 @@ function ShowUserDetails(userr: Userr) {
   }
 }
 
-const u1: Userr = { email: "higor.gabrielfds@gmail", role: "CHEFE" };
-const u2: Userr = { email: "higor.gabrielfds@gmail.com" };
-ShowUserDetails(u1);
-ShowUserDetails(u2);
+// const u11: Userr = { email: "higor.gabrielfds@gmail", role: "CHEFE" };
+// const u22: Userr = { email: "higor.gabrielfds@gmail.com" };
+// ShowUserDetails(u11);
+// ShowUserDetails(u22);
 
 //============================================================================
 // 3 - READONLY
